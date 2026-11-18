@@ -1,6 +1,6 @@
 # tiny-chess-01 — 4 KB chess engine
 
-A complete chess engine in a single `main.py` (4,094 bytes), Python 3.13
+A complete chess engine in a single `main.py` (3,361 bytes), Python 3.13
 stdlib only. It speaks HTTP to the make.fun environment (`POST /game`,
 `/move`, `/resign`) and searches each position itself.
 
@@ -14,8 +14,9 @@ stdlib only. It speaks HTTP to the make.fun environment (`POST /game`,
   a **fixed 120,000-node budget** — no clock, fully deterministic.
 - **Speed:** `__slots__`, square-list move generation — ~1.2x
   nodes/sec, so 120k costs about as much as 100k did.
-- **Size:** source is lzma-compressed (FORMAT_ALONE, preset 9) and
-  base85-encoded inside `main.py`, which only decompresses and runs it.
+- **Size:** source is packed with the kit's `makefun compress`
+  (LZMA stream in a latin-1 string) inside `main.py`, which only
+  decompresses and runs it.
   No other file is read, imported, or executed.
 
 ## Grade locally

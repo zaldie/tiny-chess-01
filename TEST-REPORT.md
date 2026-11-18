@@ -1,6 +1,6 @@
 # Test report — tiny-chess-01 (practice trials, 6 games each)
 
-Final `main.py`: **4,094 bytes** (limit 4,096). Tree under 8,192 bytes.
+Final `main.py`: **3,361 bytes** (limit 4,096). Tree under 8,192 bytes.
 
 ## Final engine — sr_nmp (null-move pruning R=3, 120,000 nodes/move)
 
