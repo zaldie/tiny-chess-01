@@ -1,8 +1,8 @@
 # tiny-chess-01 — 4 KB chess engine
 
-A complete chess engine in a single `main.py` (4,091 bytes), Python 3.13
-stdlib only. It speaks HTTP to the make.fun environment (`POST /game`,
-`/move`, `/resign`) and searches each position itself.
+A complete chess engine in one `main.py` (4,091 bytes), Python 3.13
+stdlib only. It speaks HTTP to the make.fun env (`POST /game`, `/move`,
+`/resign`) and searches each position itself.
 
 ## How it works
 
@@ -20,15 +20,11 @@ stdlib only. It speaks HTTP to the make.fun environment (`POST /game`,
 
 ## Grade locally
 
-From the kit directory (`tiny-chess-01-kit`):
+From the kit directory:
 
 ```
 node cli/makefun.mjs grade-local --kit . --bot /path/to/tiny-chess-01 \
   --driver process --instances 3
 ```
-
-Or run practice trials manually: start `program/env/server.mjs` with a
-practice `gauntlet.json`, run `main.py` with `MAKEFUN_ENV_URL` set, then
-score with `program/scorer/score.mjs`.
 
 License: MIT (see LICENSE).

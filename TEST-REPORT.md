@@ -30,14 +30,11 @@ No move near the 10 s limit. No time losses.
 Same position, fresh engine, same budget: identical move and node count
 (start: `b1c3`, 120,000 nodes). Fully deterministic, no clock.
 
-## Variants tried (3 full practice trials unless noted)
+## Variants tried
 
-- First engine @100k: mean 1,490 (12-1-5) — the old baseline.
-- dense_s (null-move + LMR + PVS): games 3-6 only, 5-1-7 vs 6-1-5
-  for the old engine — worse vs nodes-250k. Dropped.
-- dense_f (speed 1.2x) + tempo +10, @120k: **this engine**,
-  mean 1,682 (14-0-4), trial 2 = 6-0-0.
-- dense_e (tempo + bishop pair ±30): self-play +2 over tempo alone
-  (weak); not yet run in the env.
+- First engine @100k: mean 1,490 (12-1-5).
+- dense_s (NMP+LMR+PVS): games 3-6, 5-1-7 vs 6-1-5 — worse. Dropped.
+- dense_e (tempo + bishop pair): self-play +2 only; not run in env.
+- dense_ft150 @150k: net -1.5 across trials. Dropped.
 - engine1 @150k: 1,279, max move 7.39 s — too risky. Dropped.
-- engine2/3/4/5/6, cut-down variants: 1,191-1,451, all dropped.
+- engine2/3/4/5/6, cut-down: 1,191-1,451, all dropped.
